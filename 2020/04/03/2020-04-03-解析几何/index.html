@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/bitbug_favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/bitbug_favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic%7CLobster+Two:300,300italic,400,400italic,700,700italic%7CPT+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yoursite.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.8.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="&amp;emsp;&amp;emsp;这里记录一些高中数学解析几何实用的解题技巧。  阿基米德三角形&amp;emsp;&amp;emsp;阿基米德三角形：抛物线的弦与过弦的端点的两条切线所围成的三角形。     &amp;emsp;&amp;emsp;在抛物线 $y^2&#x3D;2px$中，弦$|AB|$为阿基米德三角形的底边，$M$为底边的中点，$Q$为两切线的交点。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="解析几何">
+<meta property="og:url" content="http://yoursite.com/2020/04/03/2020-04-03-%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/index.html">
+<meta property="og:site_name" content="A Time Soliloquy">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;这里记录一些高中数学解析几何实用的解题技巧。  阿基米德三角形&amp;emsp;&amp;emsp;阿基米德三角形：抛物线的弦与过弦的端点的两条切线所围成的三角形。     &amp;emsp;&amp;emsp;在抛物线 $y^2&#x3D;2px$中，弦$|AB|$为阿基米德三角形的底边，$M$为底边的中点，$Q$为两切线的交点。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yoursite.com/2020/04/03/2020-04-03-%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/1-1.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/03/2020-04-03-%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/2-1.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/03/2020-04-03-%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/2-2.png">
+<meta property="og:image" content="https://s1.ax1x.com/2020/09/12/wddtyT.jpg">
+<meta property="article:published_time" content="2020-04-03T04:30:00.000Z">
+<meta property="article:modified_time" content="2020-10-11T04:43:36.694Z">
+<meta property="article:author" content="Solitude21">
+<meta property="article:tag" content="Maths">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/04/03/2020-04-03-%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/1-1.png">
+
+
+<link rel="canonical" href="http://yoursite.com/2020/04/03/2020-04-03-%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://yoursite.com/2020/04/03/2020-04-03-%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/","path":"2020/04/03/2020-04-03-解析几何/","title":"解析几何"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>解析几何 | A Time Soliloquy</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">A Time Soliloquy</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">跨越时间的独白</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-读书"><a href="/books/" rel="section"><i class="fa fa-book fa-fw"></i>读书</a></li>
+        <li class="menu-item menu-item-游戏"><a href="/games/" rel="section"><i class="fa fa-gamepad fa-fw"></i>游戏</a></li>
+        <li class="menu-item menu-item-wiki"><a href="https://solitude21.gitee.io/" rel="noopener" target="_blank"><i class="fa fa-globe fa-fw"></i>Wiki</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%98%BF%E5%9F%BA%E7%B1%B3%E5%BE%B7%E4%B8%89%E8%A7%92%E5%BD%A2"><span class="nav-number">1.</span> <span class="nav-text">阿基米德三角形</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%A7%E8%B4%A8"><span class="nav-number">1.1.</span> <span class="nav-text">性质</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BE%8B%E9%A2%98"><span class="nav-number">1.2.</span> <span class="nav-text">例题</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8A%9B%E7%89%A9%E7%BA%BF%E7%84%A6%E7%82%B9%E5%BC%A6"><span class="nav-number">2.</span> <span class="nav-text">抛物线焦点弦</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%A7%E8%B4%A8-1"><span class="nav-number">2.1.</span> <span class="nav-text">性质</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A4%AD%E5%9C%86"><span class="nav-number">3.</span> <span class="nav-text">椭圆</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A4%AD%E5%9C%86%E7%9A%84%E4%B8%89%E5%A4%A7%E5%AE%9A%E4%B9%89"><span class="nav-number">3.1.</span> <span class="nav-text">椭圆的三大定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A4%AD%E5%9C%86%E7%AC%AC%E4%BA%8C%E5%AE%9A%E4%B9%89"><span class="nav-number">3.1.1.</span> <span class="nav-text">椭圆第二定义</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Solitude21"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Solitude21</p>
+  <div class="site-description" itemprop="description">生命不息，折腾不止</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="mailto:lzoi_lth@163.com" title="E-Mail → mailto:lzoi_lth@163.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/03/2020-04-03-%E8%A7%A3%E6%9E%90%E5%87%A0%E4%BD%95/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Solitude21">
+      <meta itemprop="description" content="生命不息，折腾不止">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="A Time Soliloquy">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          解析几何
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-04-03 12:30:00" itemprop="dateCreated datePublished" datetime="2020-04-03T12:30:00+08:00">2020-04-03</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2020-10-11 12:43:36" itemprop="dateModified" datetime="2020-10-11T12:43:36+08:00">2020-10-11</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/academic/" itemprop="url" rel="index"><span itemprop="name">academic</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <blockquote>
+<p>&emsp;&emsp;这里记录一些高中数学<strong>解析几何</strong>实用的解题技巧。</p>
+</blockquote>
+<h1 id="阿基米德三角形"><a href="#阿基米德三角形" class="headerlink" title="阿基米德三角形"></a>阿基米德三角形</h1><p>&emsp;&emsp;阿基米德三角形：抛物线的弦与过弦的端点的两条切线所围成的三角形。    </p>
+<p>&emsp;&emsp;在抛物线 $y^2=2px$中，弦$|AB|$为阿基米德三角形的底边，$M$为底边的中点，$Q$为两切线的交点。</p>
+<span id="more"></span>
+
+<p><img src="1-1.png"></p>
+<h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><p>&emsp;&emsp;<strong>性质1：</strong>阿基米德三角形底边上的中线<strong>平行于</strong>抛物线的轴.</p>
+<p>&emsp;&emsp;证明：设$A(x_1,y_1),B(x_2,y_2)$，则$M(\frac{x_1+x_2}{2},\frac{y_1+y_2}{2})$. 过A点的切线方程$y_1y=p(x_1+x)$，过B点的切线方程$y_2y=p(x_2+x)$.  联立方程$y_1^2=2px_1,y_2^2=2px_2$，解得两交点坐标为$Q(\frac{y_1y_2}{2p},\frac{y_1+y_2}{2})$.</p>
+<p>&emsp;&emsp;<strong>性质2：</strong>$\boldsymbol{|AF|\cdot |BF|=|QF|^2}$.</p>
+<p>&emsp;&emsp;<strong>性质3：</strong>若阿基米德三角形的底边<strong>过焦点</strong>$F$，顶点$Q$的轨迹为<strong>准线</strong>，且阿基米德三角形的面积最小值为$p^2$.</p>
+<h2 id="例题"><a href="#例题" class="headerlink" title="例题"></a>例题</h2><p>&emsp;&emsp;<strong>例题1：</strong>已知$F$为抛物线$C: x^2=4y$的焦点，过点$F$的直线$l$与抛物线$C$相交于不同的两点$A,B$，抛物线$C$在$A,B$两点处的切线分别是$l_1,l_2$，且$l_1,l_2$相交于$P$，则$|PF|+\frac{32}{|AB|}$的最小值为(    ).</p>
+<p>&emsp;&emsp;<strong>解：</strong>设 $A(x_1,y_1),B(x_2,y_2)$，直线 $l:y=kx+1$，</p>
+<p>&emsp;&emsp;联立$\begin{cases} y=kx+1 \\ x^2=4y \end{cases}$ 整理得 $x^2-4kx-4=0$，故 $x_1+x_2=4k，x_1x_2=-4$，</p>
+<p>&emsp;&emsp;所以 $y_1+y_2=4k^2+2，y_1y_2=1$，</p>
+<p>&emsp;&emsp;故 $|AB|=y_1+y_2+2=4k^2+4$.</p>
+<p>&emsp;&emsp;<strong>法一：</strong>由阿基米德三角形<strong>性质2</strong>得    $|FA|\cdot |FB|=|PF|^2$.</p>
+<p>&emsp;&emsp;$\begin{aligned}|PF|&amp;=\sqrt{|FA|\cdot |FB|} \\ &amp;=\sqrt{(y_1+1)(y_2+1)} \\ &amp;=\sqrt{y_1y_2+(y_1+y_2)+1} \\ &amp;=2\sqrt{k^2+1}\end {aligned}$</p>
+<p>&emsp;&emsp;$\begin{aligned}|PF|+\frac{32}{|AB|}&amp;=2\sqrt{k^2+1}+\frac{8}{k^2+1} \\ &amp;=\sqrt{k^2+1}+\sqrt{k^2+1}+\frac{8}{k^2+1} \\ &amp;\geq3\times\sqrt[3]{\sqrt{k^2+1}\cdot\sqrt{k^2+1}\cdot\frac{8}{k^2+1}} \\ &amp;=6.\end{aligned}$</p>
+<p>&emsp;&emsp;<em>注：对非负数$a,b,c$，有$\boldsymbol{\frac{a+b+c}{3}\geq\sqrt[3]{abc}}$.</em></p>
+<p>&emsp;&emsp;<em>若不用基本不等式，可以用换元。令$t=\sqrt{k^2+1}$，则原式$=2t+\frac{8}{t^2}$，求个导，注意$t$的取值，也能算出来。但还是直接用基本不等式更快。</em></p>
+<p>&emsp;&emsp;当且仅当$\sqrt{k^2+1}=\frac{8}{k^2+1}$，即$k=\pm\sqrt{3}$，最小值为$6$.</p>
+<p>&emsp;&emsp;<strong>法二：</strong>由阿基米德三角形<strong>性质1和性质3</strong>得    $P(\frac{x_1+x_2}{2},-1)$，也可求出$|PF|$，做法与法一同。</p>
+<hr>
+<p>&emsp;</p>
+<h1 id="抛物线焦点弦"><a href="#抛物线焦点弦" class="headerlink" title="抛物线焦点弦"></a>抛物线焦点弦</h1><p>&emsp;&emsp;过抛物线$y^2=2px(p&gt;0)$的焦点$F$作一条直线$L$和此抛物线交于$A(x_1,y_1),B(x_2,y_2)$两点。</p>
+<h2 id="性质-1"><a href="#性质-1" class="headerlink" title="性质"></a>性质</h2><p>&emsp;&emsp;<strong>性质0：</strong>$|AB|=x_1+x_2+p$</p>
+<p>&emsp;&emsp;<strong>性质1：</strong>若直线$L$的<strong>倾斜角</strong>为$\theta $，则弦长$\boldsymbol{|AB|=\frac{2p}{sin^2\theta }}$</p>
+<p>&emsp;&emsp;证明：若$\theta \neq\frac{π}{2}$时，直线$L$的方程为：$y=tan\theta (x-\frac{p}{2})$即$x=y\cdot cot\theta +\frac{p}{2}$，代入抛物线方程得$y^2-2py\cdot cot\theta -p^2=0$，由<strong>韦达定理</strong>得$\boldsymbol{y_1y_2=-p^2,y_1+y_2=2pcot\theta }$.</p>
+<p>&emsp;&emsp;&emsp;&emsp;由弦长公式得$|AB|=\sqrt{1+cot^2\theta }$，$|y_1-y_2|=2p(1+cot^2\theta )=\frac{2p}{sin^2\theta }$</p>
+<p>&emsp;&emsp;&emsp;&emsp;对于抛物线$x^2=2py$，弦长$|AB|=\frac{2p}{cos^2\theta },x_1x_2=-p^2$.</p>
+<p>&emsp;&emsp;<strong>性质2：</strong>过焦点的弦通径长<strong>最短</strong>.</p>
+<p>&emsp;&emsp;<strong>性质3：</strong>$\boldsymbol{S_{ΔOAB}=\frac{p^2}{2|sin\theta |}}$</p>
+<p>&emsp;&emsp;&emsp;&emsp;$\frac{S^2_{ΔOAB}}{|AB|}=\frac{p^3}{8}$为<strong>定值</strong>.</p>
+<p>&emsp;&emsp;&emsp;&emsp;对于抛物线$x^2=2py$，把$sin\theta $换成$cos\theta $即可.</p>
+<p>&emsp;&emsp;<strong>性质4：</strong>$\boldsymbol{x_1x_2=\frac{p^2}{4}}$</p>
+<hr>
+<p><img src="2-1.png"></p>
+<p>&emsp;&emsp;<strong>性质5：</strong>以$AB$为<strong>直径</strong>的圆与抛物线的<strong>准线</strong>相切.（易证）</p>
+<p>&emsp;&emsp;设$M$为$AB$的中点，过$A$点作准线的<strong>垂线</strong>$AA_1$，过$B$点作准线的<strong>垂线</strong>$BB_1$，过$M$点作准线的<strong>垂线</strong>$MM_1$，由梯形的中位线性质以及抛物线的定义知：</p>
+<p>&emsp;&emsp;&emsp;&emsp;$|MM_1|=\frac{|AA_1|+|BB_1|}{2}=\frac{|AF|+|BF|}{2}=\frac{|AB|}{2}$</p>
+<p>&emsp;&emsp;<strong>性质6：</strong>过$A$作准线的垂线$AA_1$，过$B$作准线的垂线$BB_1$，连$A_1F$，$B_1F$，则$\boldsymbol{A_1F\bot B_1F}$.</p>
+<p>&emsp;&emsp;<strong>性质7：</strong>（1）$\boldsymbol{AM_1\bot BM_1}$</p>
+<p>&emsp;&emsp;（2）$\boldsymbol{M_1F\bot AB}$</p>
+<p>&emsp;&emsp;（3）$\boldsymbol{|M_1F|^2=|AF|\cdot |BF|}$（相似可证）</p>
+<p>&emsp;&emsp;（4）如图2-1，$M_1,Q,F,H$四点共圆.</p>
+<hr>
+<p><img src="2-2.png"></p>
+<p>&emsp;&emsp;<strong>性质8：</strong>（1）$\boldsymbol{A,O,B_1}$三点共线.&emsp;（2）$\boldsymbol{B,O,A_1}$三点共线.</p>
+<p>&emsp;&emsp;证明：因为$k_{OA}=\frac{y_1}{x_1}=\frac{y_1}{\frac{y_1^2}{2p}}=\frac{2p}{y_1}$，$k_{OB_1}=\frac{y_2}{-\frac{p}{2}}=-\frac{2y_2}{p}$，而$y_1y_2=-p^2$，所以$k_{OA}=k_{OB}$，所以三点共线。同理可证（2）。</p>
+<p>&emsp;&emsp;<strong>性质9：</strong>$\boldsymbol{\frac{1}{|FA|}+\frac{1}{|FB|}=\frac{2}{p}}$</p>
+<p>&emsp;&emsp;证明：过$A$点作$AR$垂直于$x$轴于$R$，过$B$点作$BS$垂直于$x$轴于点$S$，设准线与$x$轴交点为$E$，直线$L$的倾斜角为$\theta $.</p>
+<p>&emsp;&emsp;则$|ER|=|EF|+|FR|=p+|AF|cos\theta =|AF|$，$\boldsymbol{\therefore|AF|=\frac{p}{1-cos\theta}}$，同理可得$\boldsymbol{|BF|=\frac{p}{1+cos\theta}}$，得证。</p>
+<hr>
+<p>&emsp;</p>
+<h1 id="椭圆"><a href="#椭圆" class="headerlink" title="椭圆"></a>椭圆</h1><h2 id="椭圆的三大定义"><a href="#椭圆的三大定义" class="headerlink" title="椭圆的三大定义"></a>椭圆的三大定义</h2><p>&emsp;&emsp;<strong>椭圆第一定义：</strong>（略）</p>
+<p>&emsp;&emsp;<strong>椭圆第二定义：</strong>把平面内到一定点$F$的距离与到一定点$l$的距离之比为一常数$e(0&lt;e&lt;1)$点的轨迹叫椭圆.经过计算可得准线方程:$\boldsymbol{x=\pm \frac{a^2}{c}}$.</p>
+<p>&emsp;&emsp;<strong>椭圆第三定义：</strong>把平面内到两个定点$A_1,A_2$的斜率乘积为一个常数$e^2-1(-1&lt;e^2-1&lt;0)$点的轨迹叫做椭圆.</p>
+<h3 id="椭圆第二定义"><a href="#椭圆第二定义" class="headerlink" title="椭圆第二定义"></a>椭圆第二定义</h3><p>焦半径公式推导：</p>
+<p><img src="https://s1.ax1x.com/2020/09/12/wddtyT.jpg" alt="wddtyT.jpg"></p>
+<p>在该椭圆中，$F$为焦点，$l$为准线，$M(x,y)$为椭圆上一点，过$M$作$MM_1$交$l$于$M_1$. 设$FM$与$x$轴正半轴的夹角为$\theta$，设$F$到$l$距离为$p$.</p>
+<p><strong>结论：</strong>$\boldsymbol{FM=\frac{ep}{1+e\cdot \cos \theta}=a-e\cdot x}$</p>
+<p>证明：设FM=r，由椭圆第二定义知$MM_1=\frac{r}{e}$.</p>
+<p>则$p=r\cdot \cos \theta +\frac{r}{e}$. </p>
+<p>$FM=\frac{ep}{1+e\cdot \cos \theta}$.</p>
+<p>$\because \frac{|FM|}{|MM_1|}=e$.</p>
+<p>$\therefore |FM|=e|MM_1|=e\cdot (\frac{a^2}{c}-x)=a-ex$.</p>
+<p>证毕.</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Maths/" rel="tag"># Maths</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2020/04/02/2020-04-02-hello-world/" rel="prev" title="Hello World!">
+                  <i class="fa fa-chevron-left"></i> Hello World!
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/04/04/2020-04-04-%E5%90%91%E8%8B%B1%E9%9B%84%E8%87%B4%E6%95%AC%E5%90%91%E9%80%9D%E8%80%85%E9%BB%98%E5%93%80%EF%BC%88%E8%BD%AC%EF%BC%89/" rel="next" title="向英雄致敬，向逝者默哀（转）">
+                  向英雄致敬，向逝者默哀（转） <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Solitude21</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"all","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

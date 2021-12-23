@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/bitbug_favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/bitbug_favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic%7CLobster+Two:300,300italic,400,400italic,700,700italic%7CPT+Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"yoursite.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.8.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
+<meta name="description" content="&amp;emsp;&amp;emsp;或许多年后，回想高中时的OI生涯，想到能有一群志同道合的人一起奋斗，想起曾经的奋斗与努力，没能取得好成绩的挫败感，也早已经被时间淡去了。毕竟，我努力过，我没有遗憾。  Day0&amp;emsp;&amp;emsp;从下午2点开始和Qxx，Lj，Shx在机房打模板（事实证明并没有什么用），事实上，这确实是我最后一次打模板，因为我考试时一个都没有用上…… &amp;emsp;&amp;emsp;最后一次机">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSP2019-S2 流水账式的总结与反思">
+<meta property="og:url" content="http://yoursite.com/2019/11/28/2019-11-28-CSP2019/index.html">
+<meta property="og:site_name" content="A Time Soliloquy">
+<meta property="og:description" content="&amp;emsp;&amp;emsp;或许多年后，回想高中时的OI生涯，想到能有一群志同道合的人一起奋斗，想起曾经的奋斗与努力，没能取得好成绩的挫败感，也早已经被时间淡去了。毕竟，我努力过，我没有遗憾。  Day0&amp;emsp;&amp;emsp;从下午2点开始和Qxx，Lj，Shx在机房打模板（事实证明并没有什么用），事实上，这确实是我最后一次打模板，因为我考试时一个都没有用上…… &amp;emsp;&amp;emsp;最后一次机">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2019-11-28T00:00:00.000Z">
+<meta property="article:modified_time" content="2020-04-04T00:14:49.181Z">
+<meta property="article:author" content="Solitude21">
+<meta property="article:tag" content="OI">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://yoursite.com/2019/11/28/2019-11-28-CSP2019/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://yoursite.com/2019/11/28/2019-11-28-CSP2019/","path":"2019/11/28/2019-11-28-CSP2019/","title":"CSP2019-S2 流水账式的总结与反思"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>CSP2019-S2 流水账式的总结与反思 | A Time Soliloquy</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">A Time Soliloquy</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">跨越时间的独白</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-读书"><a href="/books/" rel="section"><i class="fa fa-book fa-fw"></i>读书</a></li>
+        <li class="menu-item menu-item-游戏"><a href="/games/" rel="section"><i class="fa fa-gamepad fa-fw"></i>游戏</a></li>
+        <li class="menu-item menu-item-wiki"><a href="https://solitude21.gitee.io/" rel="noopener" target="_blank"><i class="fa fa-globe fa-fw"></i>Wiki</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Day0"><span class="nav-number">1.</span> <span class="nav-text">Day0</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day1"><span class="nav-number">2.</span> <span class="nav-text">Day1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Day2"><span class="nav-number">3.</span> <span class="nav-text">Day2</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Solitude21"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">Solitude21</p>
+  <div class="site-description" itemprop="description">生命不息，折腾不止</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">31</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">分类</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="mailto:lzoi_lth@163.com" title="E-Mail → mailto:lzoi_lth@163.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/28/2019-11-28-CSP2019/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Solitude21">
+      <meta itemprop="description" content="生命不息，折腾不止">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="A Time Soliloquy">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          CSP2019-S2 流水账式的总结与反思
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-11-28 08:00:00" itemprop="dateCreated datePublished" datetime="2019-11-28T08:00:00+08:00">2019-11-28</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2020-04-04 08:14:49" itemprop="dateModified" datetime="2020-04-04T08:14:49+08:00">2020-04-04</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/essay/" itemprop="url" rel="index"><span itemprop="name">essay</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <blockquote>
+<p>&emsp;&emsp;或许多年后，回想高中时的OI生涯，想到能有一群志同道合的人一起奋斗，想起曾经的奋斗与努力，没能取得好成绩的挫败感，也早已经被时间淡去了。毕竟，我努力过，我没有遗憾。</p>
+</blockquote>
+<h2 id="Day0"><a href="#Day0" class="headerlink" title="Day0"></a>Day0</h2><p>&emsp;&emsp;从下午2点开始和Qxx，Lj，Shx在机房打模板（事实证明并没有什么用），事实上，这确实是我最后一次打模板，因为我考试时一个都没有用上……</p>
+<p>&emsp;&emsp;最后一次机房集训了。到晚上6点，大家都还不舍得离开。在这种时候，我心中五味杂陈。既想早点结束这一切逃离这里，又希望能多留一会和同伴度过考前最后一天。真是矛盾。</p>
+<p>&emsp;&emsp;晚上我还在打模板（徒劳）。现在看来，我应该在考前的晚上好好休息，调整好心态。</p>
+<span id="more"></span>
+
+<h2 id="Day1"><a href="#Day1" class="headerlink" title="Day1"></a>Day1</h2><p>&emsp;&emsp;7点25分左右起床，然后就是上洛谷，发了一句“CSP-S 2019 RP++”迷信一波。考场就在学校（传统艺能），所以我和平常上学一样骑车，10分钟就到了。</p>
+<p>&emsp;&emsp;考试前，和同学聊聊天，上卫生间，缓解一下紧张的心情。</p>
+<p>&emsp;&emsp;考试的地点是7楼的语音室。桌子上有一块凸起，键盘放着很不方便。而且那种键盘我好久没有用过，很不适应。公布解压密码后，我输入了好几遍都没对。后来才发现我应该输入数字“0”而不是字母“O”……还是太慌张了。</p>
+<p>&emsp;&emsp;前二十分钟读题，确定了三题都打暴力的基本方针……</p>
+<p>&emsp;&emsp;T1是个找规律题，先打了个暴力，再打正解对拍。用了30分钟左右。此时我突然发现我脖子右侧有些酸痛，虽说不像落枕时那么痛，但也挺影响发挥的。</p>
+<p>&emsp;&emsp;T2就没那么顺利了。考前除了字符串哈希，我就没看过和处理字符串相关的内容。一开始想了个只能拿20分的O（n^3）算法，先打上去再说，结果调了好久。码力还是太差！打完后已经10点多了，我打算先看T3。</p>
+<p>&emsp;&emsp;看到T3，先打10分暴力。又调了一会，搞到11点才弄完。打完暴力，我发现“菊花图”的情况有25分，用草稿纸算了一会，感觉好像很简单？然后我就做出了D1令我最后悔的决定，专攻“菊花图”。</p>
+<p>&emsp;&emsp;我越算到后面，越发现情况不对，这个贪心有难度啊！回头再看看时间，11点多了。T2应该来不及写了，只好孤注一掷。到后面心态真的崩了，看着时间一分一秒的流逝，我感到一阵无力，难道真的就要这样遗憾地离场了吗？</p>
+<p>&emsp;&emsp;没有反转。D1真就这么跪了。考完后遇到班里的同学，他们问我怎么样，我只能强颜欢笑。拍集体照时，大佬们都在讨论T2正解。我感觉只有我一个人T2只拿20分了。</p>
+<p>&emsp;&emsp;骑车回家的路上，我突然释然了。考差就考差了，反正我已是退役之人。无论考好考差，我不还是得退役？从高一开始就没打算在OI路上一条路走到黑。早点死心，早点投入文化课不更好？回到家后，我默默地拾起上周欠下的作业。这一切都结束了。Luogu和QQ都没有上，就怕影响心情。</p>
+<h2 id="Day2"><a href="#Day2" class="headerlink" title="Day2"></a>Day2</h2><p>&emsp;&emsp;真是煎熬。昨晚没有睡好，满脑子想着CSP的事。只希望Day2不要死得像Day1那么惨。另外，我躺在床上时突然想到T2的50分做法，只是为时已晚……</p>
+<p>&emsp;&emsp;和昨天一样，考前聊天放松，上卫生间。</p>
+<p>&emsp;&emsp;Day2的解压密码倒是一遍输入正确。前二十分钟读题，更加坚定了打三题暴力的决心。</p>
+<p>&emsp;&emsp;看到T1后，只想到m=2和m=3的dp，64分。打了50分钟左右。剩下那些点我也没有去想了。</p>
+<p>&emsp;&emsp;T2，想先打12分的dfs，最后发现能拿20多分。</p>
+<p>&emsp;&emsp;T3，先打了情况A，然后再打暴力。本以为能打50分，考完后发现情况A打炸了，直接没了15分。</p>
+<p>&emsp;&emsp;Day2比Day1更难，CCF这次真的没有给我这样的菜鸡留点颜面。2019年11月17日中午12:00，监考老师宣布完考试结束，我的OI生涯也落下了帷幕。学了将近6年OI，最后只会打6题暴力，唉！</p>
+<p>&emsp;&emsp;考完后，张老师给我们几个合了影，然后我们就各自回班拿文化课的作业了。Qxx要准备周三的高三月考，我和Lj也有一堆周末作业。毕竟，我们都是业余选手，文化课才是主科，OI生活只是陪衬。现在要做的就是及时收心，投入文化课的学习。</p>
+<p><strong>&emsp;&emsp;尽管如此，这段经历我将永远不会忘记。或许多年后，回想高中时的OI生涯，想到能有一群志同道合的人一起奋斗，想起曾经的奋斗与努力，没能取得好成绩的挫败感，也早已经被时间淡去了。毕竟，我努力过，我没有遗憾。</strong></p>
+<p><em><strong>&emsp;&emsp;THE END IS NEVER THE END.</strong></em></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/OI/" rel="tag"># OI</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/1919/08/10/1919-08-10-%E9%AB%98%E4%B8%AD/" rel="prev" title="高中">
+                  <i class="fa fa-chevron-left"></i> 高中
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2020/04/02/2020-04-02-hello-world/" rel="next" title="Hello World!">
+                  Hello World! <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Solitude21</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"all","js":{"url":"https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js","integrity":"sha256-r+3itOMtGGjap0x+10hu6jW/gZCzxHsoKrOd7gyRSGY="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

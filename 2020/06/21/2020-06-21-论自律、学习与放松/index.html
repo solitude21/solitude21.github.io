@@ -46,7 +46,7 @@
 
 
 
-
+<link rel="dns-prefetch" href="https://waline-navy-seven.vercel.app/">
   <noscript>
     <link rel="stylesheet" href="/css/noscript.css">
   </noscript>
@@ -237,6 +237,28 @@
     </span>
 
   
+  
+  <span class="post-meta-item">
+    
+    <span class="post-meta-item-icon">
+      <i class="far fa-comment"></i>
+    </span>
+    <span class="post-meta-item-text">Waline：</span>
+  
+    <a title="waline" href="/2020/06/21/2020-06-21-%E8%AE%BA%E8%87%AA%E5%BE%8B%E3%80%81%E5%AD%A6%E4%B9%A0%E4%B8%8E%E6%94%BE%E6%9D%BE/#waline-comments" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" id="/2020/06/21/2020-06-21-%E8%AE%BA%E8%87%AA%E5%BE%8B%E3%80%81%E5%AD%A6%E4%B9%A0%E4%B8%8E%E6%94%BE%E6%9D%BE/" data-xid="/2020/06/21/2020-06-21-%E8%AE%BA%E8%87%AA%E5%BE%8B%E3%80%81%E5%AD%A6%E4%B9%A0%E4%B8%8E%E6%94%BE%E6%9D%BE/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+    <span id="/2020/06/21/2020-06-21-%E8%AE%BA%E8%87%AA%E5%BE%8B%E3%80%81%E5%AD%A6%E4%B9%A0%E4%B8%8E%E6%94%BE%E6%9D%BE/" class="post-meta-item leancloud_visitors" data-flag-title="论自律、学习与放松" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
 </div>
 
         </div>
@@ -287,6 +309,7 @@
 
 
 
+    <div class="comments" id="waline-comments"></div>
 </div>
   </main>
 
@@ -329,6 +352,15 @@
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
-
+<script class="next-config" data-name="waline" type="application/json">{"lang":null,"enable":true,"serverURL":"https://waline-navy-seven.vercel.app/","placeholder":"Just go go","avatar":"mm","pageSize":10,"visitor":true,"comment_count":true,"requiredFields":[],"meta":["nick","mail","link"],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","dark":"auto","el":"#waline-comments","path":"/2020/06/21/2020-06-21-%E8%AE%BA%E8%87%AA%E5%BE%8B%E3%80%81%E5%AD%A6%E4%B9%A0%E4%B8%8E%E6%94%BE%E6%9D%BE/"}</script>
+<script>
+document.addEventListener('page:loaded', () => {
+  NexT.utils.loadComments(CONFIG.waline.el).then(() => 
+    NexT.utils.getScript(CONFIG.waline.libUrl, { condition: window.Waline })
+  ).then(() => {
+    new Waline(CONFIG.waline);
+  });
+});
+</script>
 </body>
 </html>

@@ -20,25 +20,28 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"yoursite.com","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.8.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="生命不息，折腾不止">
-<meta property="og:type" content="website">
-<meta property="og:title" content="A Time Soliloquy">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="作为一名计算机系的学生，我以后应该会把这个博客作为我的技术博客。所以我想测试一下贴代码的效果，刚好昨晚和旋转图像的大作业搏斗了一个晚上。说来也挺搞笑的，我废寝忘食地研究了好几个小时，就为了把一张破图片顺时针旋转90度……之前不是有新闻说吗，某地区负责健康码维护的技术人员花了老大的劲把二维码图片从1M压缩到100K。我对他们也有点感同身受了，或许压缩图片的操作真的隐藏着很多技术上的问题。有没有可能是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="BMP图像旋转">
+<meta property="og:url" content="http://yoursite.com/2022/03/27/2022-03-27-BMP%E5%9B%BE%E5%83%8F%E6%97%8B%E8%BD%AC/index.html">
 <meta property="og:site_name" content="A Time Soliloquy">
-<meta property="og:description" content="生命不息，折腾不止">
+<meta property="og:description" content="作为一名计算机系的学生，我以后应该会把这个博客作为我的技术博客。所以我想测试一下贴代码的效果，刚好昨晚和旋转图像的大作业搏斗了一个晚上。说来也挺搞笑的，我废寝忘食地研究了好几个小时，就为了把一张破图片顺时针旋转90度……之前不是有新闻说吗，某地区负责健康码维护的技术人员花了老大的劲把二维码图片从1M压缩到100K。我对他们也有点感同身受了，或许压缩图片的操作真的隐藏着很多技术上的问题。有没有可能是">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-03-26T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-03-27T13:59:31.446Z">
 <meta property="article:author" content="Solitude21">
+<meta property="article:tag" content="CS">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://yoursite.com/">
+<link rel="canonical" href="http://yoursite.com/2022/03/27/2022-03-27-BMP%E5%9B%BE%E5%83%8F%E6%97%8B%E8%BD%AC/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://yoursite.com/2022/03/27/2022-03-27-BMP%E5%9B%BE%E5%83%8F%E6%97%8B%E8%BD%AC/","path":"2022/03/27/2022-03-27-BMP图像旋转/","title":"BMP图像旋转"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>A Time Soliloquy</title>
+<title>BMP图像旋转 | A Time Soliloquy</title>
   
 
 
@@ -67,7 +70,7 @@
 
     <a href="/" class="brand" rel="start">
       <i class="logo-line"></i>
-      <h1 class="site-title">A Time Soliloquy</h1>
+      <p class="site-title">A Time Soliloquy</p>
       <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">跨越时间的独白</p>
@@ -182,16 +185,17 @@
 </noscript>
 
 
-    <div class="main-inner index posts-expand">
+    <div class="main-inner post posts-expand">
 
-    
+
+  
 
 
 <div class="post-block">
   
   
 
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/03/27/2022-03-27-BMP%E5%9B%BE%E5%83%8F%E6%97%8B%E8%BD%AC/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -204,9 +208,9 @@
       <meta itemprop="name" content="A Time Soliloquy">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/03/27/2022-03-27-BMP%E5%9B%BE%E5%83%8F%E6%97%8B%E8%BD%AC/" class="post-title-link" itemprop="url">BMP图像旋转</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          BMP图像旋转
+        </h1>
 
         <div class="post-meta-container">
           <div class="post-meta">
@@ -261,7 +265,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>作为一名计算机系的学生，我以后应该会把这个博客作为我的技术博客。所以我想测试一下贴代码的效果，刚好昨晚和旋转图像的大作业搏斗了一个晚上。说来也挺搞笑的，我废寝忘食地研究了好几个小时，就为了把一张破图片顺时针旋转90度……之前不是有新闻说吗，某地区负责健康码维护的技术人员花了老大的劲把二维码图片从1M压缩到100K。我对他们也有点感同身受了，或许压缩图片的操作真的隐藏着很多技术上的问题。有没有可能是，他们之前维护系统时一直使用1M的图片，然后很多别的功能都基于这种规格的图片开发出来，产生了极高的耦合。然后他们不得不花大量的时间进行解耦，为了让领导能听懂，就只提了一下压缩图片的事。以上纯属瞎猜。</p>
+        <p>作为一名计算机系的学生，我以后应该会把这个博客作为我的技术博客。所以我想测试一下贴代码的效果，刚好昨晚和旋转图像的大作业搏斗了一个晚上。说来也挺搞笑的，我废寝忘食地研究了好几个小时，就为了把一张破图片顺时针旋转90度……之前不是有新闻说吗，某地区负责健康码维护的技术人员花了老大的劲把二维码图片从1M压缩到100K。我对他们也有点感同身受了，或许压缩图片的操作真的隐藏着很多技术上的问题。有没有可能是，他们之前维护系统时一直使用1M的图片，然后很多别的功能都基于这种规格的图片开发出来，产生了极高的耦合。然后他们不得不花大量的时间进行解耦，为了让领导能听懂，就只提了一下压缩图片的事。以上纯属瞎猜。</p>
 <p>BMP文件格式有很多坑，其中一个就是文件对齐。在24位BMP图像的像素矩阵中，一个像素用3个字节存储，存储内容是该像素的颜色信息，即rgbBlue、rgbGreen、rgbRed。然而，为了让像素矩阵的大小刚好是4的倍数，这个矩阵最后还会加上那么几列！旋转90度后，这个列数可能会变！变了的话又会影响到前面信息头中的数据。</p>
 <p>还有就是24位BMP和32位BMP的信息头大小是不一样的！这些不去了解根本不知道。有些时候，bug的产生，并不是因为我们不够谨慎，而是因为还存在未知。很多人调侃自己是“面向百度编程”，“CV工程师”，我不认为这是一件可耻的事情。计算机领域是一个人为构建起来的学科，前人的经验至关重要。善于搜索和查阅先辈遗留下来的知识也是CS技能树中不可或缺的一部分。</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// BmpClass.h</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> once</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">pragma</span> pack(2)</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">char</span> Byte;		<span class="comment">// 1字节</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">short</span> Word;	<span class="comment">// 2字节</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> Dword;	<span class="comment">// 4字节</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> Long;				<span class="comment">// 4字节</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// BMP文件头，12字节</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">BitMapFileHeader</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="comment">//Word	bfType;			// 位图文件类型 &quot;BM&quot;</span></span><br><span class="line">	Dword	bfSize;			<span class="comment">// 位图文件大小，以字节为单位</span></span><br><span class="line">	Word	bfReserved1;	<span class="comment">// 位图文件保留字</span></span><br><span class="line">	Word	bfReserved2;	<span class="comment">// 位图文件保留字</span></span><br><span class="line">	Dword	bfOffBits;		<span class="comment">// 位图数据起始位置，以相对位图文件头的偏移量表示</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// DIB信息头，40字节</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">BitMapInfoHeader</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	Dword	biSize;				<span class="comment">// 本结构占用字节数</span></span><br><span class="line">	Long	biWidth;			<span class="comment">// 位图宽度，单位像素</span></span><br><span class="line">	Long	biHeight;			<span class="comment">// 位图高度</span></span><br><span class="line">	Word	biPlanes;			<span class="comment">// 1</span></span><br><span class="line">	Word	biBitCount;			<span class="comment">// 每个像素所需的位数，必须是1、4、8、24之一</span></span><br><span class="line">	Dword	biCompression;		<span class="comment">// 位图压缩类型，必须是0、1、2之一</span></span><br><span class="line">	Dword	biSizeImage;		<span class="comment">// 位图的大小，单位字节</span></span><br><span class="line">	Long	biXPelsPerMeter;	<span class="comment">// 位图水平分辨率，每米像素数</span></span><br><span class="line">	Long	biYPelsPerMeter;	<span class="comment">// 位图垂直分辨率</span></span><br><span class="line">	Dword	biClrUsed;			<span class="comment">// 实际使用颜色数，24位为0</span></span><br><span class="line">	Dword	biClrImportant;		<span class="comment">// 重要颜色数</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// DIBV5信息头，124字节</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">BitMapInfoHeader32bit</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	Dword	biSize;				<span class="comment">// 本结构占用字节数</span></span><br><span class="line">	Long	biWidth;			<span class="comment">// 位图宽度，单位像素</span></span><br><span class="line">	Long	biHeight;			<span class="comment">// 位图高度</span></span><br><span class="line">	Word	biPlanes;			<span class="comment">// 1</span></span><br><span class="line">	Word	biBitCount;			<span class="comment">// 每个像素所需的位数，必须是1、4、8、24之一</span></span><br><span class="line">	Dword	biCompression;		<span class="comment">// 位图压缩类型，必须是0、1、2之一</span></span><br><span class="line">	Dword	biSizeImage;		<span class="comment">// 位图的大小，单位字节</span></span><br><span class="line">	Long	biXPelsPerMeter;	<span class="comment">// 位图水平分辨率，每米像素数</span></span><br><span class="line">	Long	biYPelsPerMeter;	<span class="comment">// 位图垂直分辨率</span></span><br><span class="line">	Dword	biClrUsed;			<span class="comment">// 实际使用颜色数，24位为0</span></span><br><span class="line">	Dword	biClrImportant;		<span class="comment">// 重要颜色数</span></span><br><span class="line">	Long	extras[<span class="number">21</span>];			<span class="comment">// 补足124字节</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 颜色类型，4字节</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">RgbQuad</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	Byte rgbRed;		<span class="comment">// 0~255</span></span><br><span class="line">	Byte rgbGreen;</span><br><span class="line">	Byte rgbBlue;</span><br><span class="line">	Byte rgbReserved;	<span class="comment">// 0</span></span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">PixelInfo</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	Byte blue;</span><br><span class="line">	Byte green;</span><br><span class="line">	Byte red;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Image</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">int</span> width;</span><br><span class="line">	<span class="keyword">int</span> height;</span><br><span class="line">	Byte* imageData;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
@@ -271,7 +275,6 @@
 <p>发现一件怪事，VS上能正常运行的代码，在VSCode上就会<code>segmentation fault</code>。是编译器的问题吗？</p>
 <p>破案了，但没有完全破。经另一位饱受困扰的同学提醒，我发现在VSCode中<code>#pragma</code> 宏定义要放在<code>#include</code>头文件后面才能正常运行。但我也不知道是什么原因。这周末疯狂写码，再这样下去怕是要寄。所以我也懒得管了，还是身体要紧、好好休息。</p>
 
-      
     </div>
 
     
@@ -279,431 +282,21 @@
     
 
     <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
+          <div class="post-tags">
+              <a href="/tags/CS/" rel="tag"># CS</a>
+          </div>
 
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/02/19/2022-02-19-Thats-the-way-it-is/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Solitude21">
-      <meta itemprop="description" content="生命不息，折腾不止">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="A Time Soliloquy">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2022/02/19/2022-02-19-Thats-the-way-it-is/" class="post-title-link" itemprop="url">That's the way it is.</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2022-02-19 00:00:00 / 修改时间：16:47:40" itemprop="dateCreated datePublished" datetime="2022-02-19T00:00:00+08:00">2022-02-19</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/essay/" itemprop="url" rel="index"><span itemprop="name">essay</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-    <span class="post-meta-item-icon">
-      <i class="far fa-comment"></i>
-    </span>
-    <span class="post-meta-item-text">Waline：</span>
-  
-    <a title="waline" href="/2022/02/19/2022-02-19-Thats-the-way-it-is/#waline-comments" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" id="/2022/02/19/2022-02-19-Thats-the-way-it-is/" data-xid="/2022/02/19/2022-02-19-Thats-the-way-it-is/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span id="/2022/02/19/2022-02-19-Thats-the-way-it-is/" class="post-meta-item leancloud_visitors" data-flag-title="That's the way it is." title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1372315065&auto=0&height=66"></iframe>
-
-<p>2018年的夏天，我通关了GTA5。这是我接触的第一部3A大作，也是我得到新电脑后玩的第一个游戏。在接下来的一两年中，我又尝试了《看门狗》《刺客信条》《正当防卫》等等3A作品。但没有一部能像GTA5那样，让我坚持玩到最后。直到2022年的冬天，我开始了《荒野大镖客2（RDR2）》的西部世界之旅，我才再一次找回了那个夏天、那份感动。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2022/02/19/2022-02-19-Thats-the-way-it-is/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/12/30/2021-12-30-%E6%9C%9F%E6%9C%AB%E5%AD%A3%E6%9C%89%E6%84%9F/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Solitude21">
-      <meta itemprop="description" content="生命不息，折腾不止">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="A Time Soliloquy">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/12/30/2021-12-30-%E6%9C%9F%E6%9C%AB%E5%AD%A3%E6%9C%89%E6%84%9F/" class="post-title-link" itemprop="url">期末季有感</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-12-30 00:00:00" itemprop="dateCreated datePublished" datetime="2021-12-30T00:00:00+08:00">2021-12-30</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-12-31 00:26:14" itemprop="dateModified" datetime="2021-12-31T00:26:14+08:00">2021-12-31</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/essay/" itemprop="url" rel="index"><span itemprop="name">essay</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-    <span class="post-meta-item-icon">
-      <i class="far fa-comment"></i>
-    </span>
-    <span class="post-meta-item-text">Waline：</span>
-  
-    <a title="waline" href="/2021/12/30/2021-12-30-%E6%9C%9F%E6%9C%AB%E5%AD%A3%E6%9C%89%E6%84%9F/#waline-comments" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" id="/2021/12/30/2021-12-30-%E6%9C%9F%E6%9C%AB%E5%AD%A3%E6%9C%89%E6%84%9F/" data-xid="/2021/12/30/2021-12-30-%E6%9C%9F%E6%9C%AB%E5%AD%A3%E6%9C%89%E6%84%9F/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span id="/2021/12/30/2021-12-30-%E6%9C%9F%E6%9C%AB%E5%AD%A3%E6%9C%89%E6%84%9F/" class="post-meta-item leancloud_visitors" data-flag-title="期末季有感" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1313107767&auto=0&height=66"></iframe>
-
-<p>期末季算是告一段落了，虽然还有1月5号的线性代数。简单地记录一下这几周以来的状况。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/12/30/2021-12-30-%E6%9C%9F%E6%9C%AB%E5%AD%A3%E6%9C%89%E6%84%9F/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/02/19/2022-02-19-Thats-the-way-it-is/" rel="prev" title="That's the way it is.">
+                  <i class="fa fa-chevron-left"></i> That's the way it is.
+                </a>
             </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/12/24/2021-12-24-2021%E5%B9%B412%E6%9C%88Blog%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Solitude21">
-      <meta itemprop="description" content="生命不息，折腾不止">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="A Time Soliloquy">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/12/24/2021-12-24-2021%E5%B9%B412%E6%9C%88Blog%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/" class="post-title-link" itemprop="url">2021年12月Blog更新日志</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-12-24 00:00:00 / 修改时间：12:05:38" itemprop="dateCreated datePublished" datetime="2021-12-24T00:00:00+08:00">2021-12-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/log/" itemprop="url" rel="index"><span itemprop="name">log</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-    <span class="post-meta-item-icon">
-      <i class="far fa-comment"></i>
-    </span>
-    <span class="post-meta-item-text">Waline：</span>
-  
-    <a title="waline" href="/2021/12/24/2021-12-24-2021%E5%B9%B412%E6%9C%88Blog%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/#waline-comments" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" id="/2021/12/24/2021-12-24-2021%E5%B9%B412%E6%9C%88Blog%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/" data-xid="/2021/12/24/2021-12-24-2021%E5%B9%B412%E6%9C%88Blog%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span id="/2021/12/24/2021-12-24-2021%E5%B9%B412%E6%9C%88Blog%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97/" class="post-meta-item leancloud_visitors" data-flag-title="2021年12月Blog更新日志" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>昨天发现Valine评论系统崩掉了，于是鼓捣了一个下午一个晚上外加今天半个早上，终于将整个博客重装到了最新版本，然后换成Waline评论系统。我看了一下，上一次这么大规模的折腾还是在去年十月左右吧，那时为了加一个访客地图（电脑端可查看），折腾了老半天。</p>
-<p>不过还行，重装虽然花了不少时间，但总体还算顺利。新版本的Next主题的维护者是一位校友，我大PKU真是人才辈出啊。我就说，难怪开启深色模式后，这红与灰的配色如此眼熟……</p>
-<p>可能未来会开放留言板？或者是重新搞一下Wiki？又或许弄一个Art Gallery？但眼下还是先把期末考给熬过去吧……</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/12/18/2021-12-18-12%E6%9C%8818%E6%97%A5%E9%9A%8F%E6%83%B3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Solitude21">
-      <meta itemprop="description" content="生命不息，折腾不止">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="A Time Soliloquy">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/12/18/2021-12-18-12%E6%9C%8818%E6%97%A5%E9%9A%8F%E6%83%B3/" class="post-title-link" itemprop="url">12月随想</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-12-18 00:00:00" itemprop="dateCreated datePublished" datetime="2021-12-18T00:00:00+08:00">2021-12-18</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-12-25 11:34:32" itemprop="dateModified" datetime="2021-12-25T11:34:32+08:00">2021-12-25</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/essay/" itemprop="url" rel="index"><span itemprop="name">essay</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-    <span class="post-meta-item-icon">
-      <i class="far fa-comment"></i>
-    </span>
-    <span class="post-meta-item-text">Waline：</span>
-  
-    <a title="waline" href="/2021/12/18/2021-12-18-12%E6%9C%8818%E6%97%A5%E9%9A%8F%E6%83%B3/#waline-comments" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" id="/2021/12/18/2021-12-18-12%E6%9C%8818%E6%97%A5%E9%9A%8F%E6%83%B3/" data-xid="/2021/12/18/2021-12-18-12%E6%9C%8818%E6%97%A5%E9%9A%8F%E6%83%B3/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span id="/2021/12/18/2021-12-18-12%E6%9C%8818%E6%97%A5%E9%9A%8F%E6%83%B3/" class="post-meta-item leancloud_visitors" data-flag-title="12月随想" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          这里有东西被加密了，需要输入密码查看哦.
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/12/18/2021-12-18-12%E6%9C%8818%E6%97%A5%E9%9A%8F%E6%83%B3/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
+            <div class="post-nav-item">
             </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
+          </div>
     </footer>
   </article>
 </div>
@@ -711,554 +304,9 @@
 
 
 
-    
 
 
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/10/24/2021-10-24-%E5%8D%81%E6%9C%88%E6%9C%88%E8%AE%B0&&%E3%80%8A%E5%BD%B1%E5%AD%90%E5%B7%A5%E5%8E%82%E3%80%8B%E3%80%8A%E7%9C%BC%E4%B9%8B%E5%9B%9E%E5%93%8D%E3%80%8B%E6%84%9F%E6%83%B3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Solitude21">
-      <meta itemprop="description" content="生命不息，折腾不止">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="A Time Soliloquy">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/10/24/2021-10-24-%E5%8D%81%E6%9C%88%E6%9C%88%E8%AE%B0&&%E3%80%8A%E5%BD%B1%E5%AD%90%E5%B7%A5%E5%8E%82%E3%80%8B%E3%80%8A%E7%9C%BC%E4%B9%8B%E5%9B%9E%E5%93%8D%E3%80%8B%E6%84%9F%E6%83%B3/" class="post-title-link" itemprop="url">十月月记&&《影子工厂》《眼之回响》感想</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-10-24 00:00:00 / 修改时间：23:46:38" itemprop="dateCreated datePublished" datetime="2021-10-24T00:00:00+08:00">2021-10-24</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/essay/" itemprop="url" rel="index"><span itemprop="name">essay</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-    <span class="post-meta-item-icon">
-      <i class="far fa-comment"></i>
-    </span>
-    <span class="post-meta-item-text">Waline：</span>
-  
-    <a title="waline" href="/2021/10/24/2021-10-24-%E5%8D%81%E6%9C%88%E6%9C%88%E8%AE%B0&&%E3%80%8A%E5%BD%B1%E5%AD%90%E5%B7%A5%E5%8E%82%E3%80%8B%E3%80%8A%E7%9C%BC%E4%B9%8B%E5%9B%9E%E5%93%8D%E3%80%8B%E6%84%9F%E6%83%B3/#waline-comments" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" id="/2021/10/24/2021-10-24-%E5%8D%81%E6%9C%88%E6%9C%88%E8%AE%B0&&%E3%80%8A%E5%BD%B1%E5%AD%90%E5%B7%A5%E5%8E%82%E3%80%8B%E3%80%8A%E7%9C%BC%E4%B9%8B%E5%9B%9E%E5%93%8D%E3%80%8B%E6%84%9F%E6%83%B3/" data-xid="/2021/10/24/2021-10-24-%E5%8D%81%E6%9C%88%E6%9C%88%E8%AE%B0&&%E3%80%8A%E5%BD%B1%E5%AD%90%E5%B7%A5%E5%8E%82%E3%80%8B%E3%80%8A%E7%9C%BC%E4%B9%8B%E5%9B%9E%E5%93%8D%E3%80%8B%E6%84%9F%E6%83%B3/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span id="/2021/10/24/2021-10-24-%E5%8D%81%E6%9C%88%E6%9C%88%E8%AE%B0&&%E3%80%8A%E5%BD%B1%E5%AD%90%E5%B7%A5%E5%8E%82%E3%80%8B%E3%80%8A%E7%9C%BC%E4%B9%8B%E5%9B%9E%E5%93%8D%E3%80%8B%E6%84%9F%E6%83%B3/" class="post-meta-item leancloud_visitors" data-flag-title="十月月记&&《影子工厂》《眼之回响》感想" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=3&id=2493180415&auto=0&height=66"></iframe>
-
-<blockquote>
-<p>“陀思妥耶夫告诉我们：要爱具体的人，不要总是想着爱抽象的人。知识分子的一个经常性的倾向，就是我们喜欢抽象概念，胜过具象的事物。但是一个越爱抽象人的人，往往越难对具体的人表现关爱。因为抽象的人是美好的，抽象的人存在于理念之中，但具体的人都是有缺陷的。 所以这就是为什么你越感到抽象人的美好，你越会发现具体人、你身边人的可恶、可耻、卑鄙。但是真正的爱一定是对具体人的爱。所以这就是为什么在现代社会，人越来越孤独。因为你的朋友圈越来越多，你感觉认识你的人和你认识的人越来越多，你甚至可以跟3000公里以外的人聊天，但是你却跟你身边的人没有话聊。而真正的感情是要投入时间的，真正的情感一定是要附着在一个具体人的对象。所以我们需要有抽象，我们更需要有具象。抽象是对自己的，抽象不是对别人的。当你看到了人的美好，你要努力让自己变得美好，而不要因为人的美好，就要强求你身边的人变得美好。因为连你自己都不美好，你为什么要强求别人呢。你自己都做不到，你为什么要强求别人呢。但你看到了抽象的美好 ，它提供了一个标本，来改造你自己，让你自己能够更关心你身边的人。”</p>
-<p>——罗翔</p>
-</blockquote>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/10/24/2021-10-24-%E5%8D%81%E6%9C%88%E6%9C%88%E8%AE%B0&&%E3%80%8A%E5%BD%B1%E5%AD%90%E5%B7%A5%E5%8E%82%E3%80%8B%E3%80%8A%E7%9C%BC%E4%B9%8B%E5%9B%9E%E5%93%8D%E3%80%8B%E6%84%9F%E6%83%B3/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/09/26/2021-09-26-BIGC2021%E5%8D%8A%E6%97%A5%E6%B8%B8/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Solitude21">
-      <meta itemprop="description" content="生命不息，折腾不止">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="A Time Soliloquy">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/09/26/2021-09-26-BIGC2021%E5%8D%8A%E6%97%A5%E6%B8%B8/" class="post-title-link" itemprop="url">BIGC2021半日游</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-09-26 00:00:00 / 修改时间：18:08:15" itemprop="dateCreated datePublished" datetime="2021-09-26T00:00:00+08:00">2021-09-26</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/essay/" itemprop="url" rel="index"><span itemprop="name">essay</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-    <span class="post-meta-item-icon">
-      <i class="far fa-comment"></i>
-    </span>
-    <span class="post-meta-item-text">Waline：</span>
-  
-    <a title="waline" href="/2021/09/26/2021-09-26-BIGC2021%E5%8D%8A%E6%97%A5%E6%B8%B8/#waline-comments" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" id="/2021/09/26/2021-09-26-BIGC2021%E5%8D%8A%E6%97%A5%E6%B8%B8/" data-xid="/2021/09/26/2021-09-26-BIGC2021%E5%8D%8A%E6%97%A5%E6%B8%B8/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span id="/2021/09/26/2021-09-26-BIGC2021%E5%8D%8A%E6%97%A5%E6%B8%B8/" class="post-meta-item leancloud_visitors" data-flag-title="BIGC2021半日游" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>开学已经半个月了，目前看来一切都还好。可能是才刚刚开学的缘故，我并没有感到很累。</p>
-<p>今天早上抽空去了一趟BIGC2021展览，全称是“北京国际游戏创新展”。怎么说呢，去的时候就没有抱很大的期望。意料之中，展览并没有给我太多的惊喜，但收获也不是没有。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/09/26/2021-09-26-BIGC2021%E5%8D%8A%E6%97%A5%E6%B8%B8/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/08/24/2021-08-24-%E4%BB%8E%E3%80%8A%E5%8E%BB%E6%9C%88%E7%90%83%E3%80%8B%E5%88%B0%E3%80%8A%E5%AF%BB%E6%89%BE%E5%A4%A9%E5%A0%82%E3%80%8B%EF%BC%9A%E7%8B%AC%E7%AB%8B%E6%B8%B8%E6%88%8F%E7%9A%84%E5%8F%A6%E4%B8%80%E6%9D%A1%E8%B7%AF/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Solitude21">
-      <meta itemprop="description" content="生命不息，折腾不止">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="A Time Soliloquy">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/08/24/2021-08-24-%E4%BB%8E%E3%80%8A%E5%8E%BB%E6%9C%88%E7%90%83%E3%80%8B%E5%88%B0%E3%80%8A%E5%AF%BB%E6%89%BE%E5%A4%A9%E5%A0%82%E3%80%8B%EF%BC%9A%E7%8B%AC%E7%AB%8B%E6%B8%B8%E6%88%8F%E7%9A%84%E5%8F%A6%E4%B8%80%E6%9D%A1%E8%B7%AF/" class="post-title-link" itemprop="url">从《去月球》到《寻找天堂》：独立游戏的另一条路</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-08-24 00:00:00" itemprop="dateCreated datePublished" datetime="2021-08-24T00:00:00+08:00">2021-08-24</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-08-25 20:46:53" itemprop="dateModified" datetime="2021-08-25T20:46:53+08:00">2021-08-25</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/essay/" itemprop="url" rel="index"><span itemprop="name">essay</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-    <span class="post-meta-item-icon">
-      <i class="far fa-comment"></i>
-    </span>
-    <span class="post-meta-item-text">Waline：</span>
-  
-    <a title="waline" href="/2021/08/24/2021-08-24-%E4%BB%8E%E3%80%8A%E5%8E%BB%E6%9C%88%E7%90%83%E3%80%8B%E5%88%B0%E3%80%8A%E5%AF%BB%E6%89%BE%E5%A4%A9%E5%A0%82%E3%80%8B%EF%BC%9A%E7%8B%AC%E7%AB%8B%E6%B8%B8%E6%88%8F%E7%9A%84%E5%8F%A6%E4%B8%80%E6%9D%A1%E8%B7%AF/#waline-comments" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" id="/2021/08/24/2021-08-24-%E4%BB%8E%E3%80%8A%E5%8E%BB%E6%9C%88%E7%90%83%E3%80%8B%E5%88%B0%E3%80%8A%E5%AF%BB%E6%89%BE%E5%A4%A9%E5%A0%82%E3%80%8B%EF%BC%9A%E7%8B%AC%E7%AB%8B%E6%B8%B8%E6%88%8F%E7%9A%84%E5%8F%A6%E4%B8%80%E6%9D%A1%E8%B7%AF/" data-xid="/2021/08/24/2021-08-24-%E4%BB%8E%E3%80%8A%E5%8E%BB%E6%9C%88%E7%90%83%E3%80%8B%E5%88%B0%E3%80%8A%E5%AF%BB%E6%89%BE%E5%A4%A9%E5%A0%82%E3%80%8B%EF%BC%9A%E7%8B%AC%E7%AB%8B%E6%B8%B8%E6%88%8F%E7%9A%84%E5%8F%A6%E4%B8%80%E6%9D%A1%E8%B7%AF/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span id="/2021/08/24/2021-08-24-%E4%BB%8E%E3%80%8A%E5%8E%BB%E6%9C%88%E7%90%83%E3%80%8B%E5%88%B0%E3%80%8A%E5%AF%BB%E6%89%BE%E5%A4%A9%E5%A0%82%E3%80%8B%EF%BC%9A%E7%8B%AC%E7%AB%8B%E6%B8%B8%E6%88%8F%E7%9A%84%E5%8F%A6%E4%B8%80%E6%9D%A1%E8%B7%AF/" class="post-meta-item leancloud_visitors" data-flag-title="从《去月球》到《寻找天堂》：独立游戏的另一条路" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=2&id=1645112&auto=0&height=66"></iframe>
-
-<p>《去月球》和《寻找天堂》在独立游戏中是特立独行的存在。尽管缺乏游戏性，更像是“视觉小说”，但它们在玩家群体中却广受好评。为什么会这样呢？我的意思是，为什么《去月球》和《寻找天堂》能在舍弃游戏性的情况下收获如此多的好评？</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/08/24/2021-08-24-%E4%BB%8E%E3%80%8A%E5%8E%BB%E6%9C%88%E7%90%83%E3%80%8B%E5%88%B0%E3%80%8A%E5%AF%BB%E6%89%BE%E5%A4%A9%E5%A0%82%E3%80%8B%EF%BC%9A%E7%8B%AC%E7%AB%8B%E6%B8%B8%E6%88%8F%E7%9A%84%E5%8F%A6%E4%B8%80%E6%9D%A1%E8%B7%AF/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/08/23/2021-08-23-Genesis-Noir%EF%BC%9A%E9%BB%91%E6%B4%9E%E3%80%81%E5%B8%B8%E6%95%B0%E4%B8%8E%E7%88%B5%E5%A3%AB%E4%B9%90/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Solitude21">
-      <meta itemprop="description" content="生命不息，折腾不止">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="A Time Soliloquy">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/08/23/2021-08-23-Genesis-Noir%EF%BC%9A%E9%BB%91%E6%B4%9E%E3%80%81%E5%B8%B8%E6%95%B0%E4%B8%8E%E7%88%B5%E5%A3%AB%E4%B9%90/" class="post-title-link" itemprop="url">Genesis Noir：黑洞、常数与爵士乐</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-08-23 00:00:00" itemprop="dateCreated datePublished" datetime="2021-08-23T00:00:00+08:00">2021-08-23</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-08-24 12:59:07" itemprop="dateModified" datetime="2021-08-24T12:59:07+08:00">2021-08-24</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/essay/" itemprop="url" rel="index"><span itemprop="name">essay</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-    <span class="post-meta-item-icon">
-      <i class="far fa-comment"></i>
-    </span>
-    <span class="post-meta-item-text">Waline：</span>
-  
-    <a title="waline" href="/2021/08/23/2021-08-23-Genesis-Noir%EF%BC%9A%E9%BB%91%E6%B4%9E%E3%80%81%E5%B8%B8%E6%95%B0%E4%B8%8E%E7%88%B5%E5%A3%AB%E4%B9%90/#waline-comments" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" id="/2021/08/23/2021-08-23-Genesis-Noir%EF%BC%9A%E9%BB%91%E6%B4%9E%E3%80%81%E5%B8%B8%E6%95%B0%E4%B8%8E%E7%88%B5%E5%A3%AB%E4%B9%90/" data-xid="/2021/08/23/2021-08-23-Genesis-Noir%EF%BC%9A%E9%BB%91%E6%B4%9E%E3%80%81%E5%B8%B8%E6%95%B0%E4%B8%8E%E7%88%B5%E5%A3%AB%E4%B9%90/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span id="/2021/08/23/2021-08-23-Genesis-Noir%EF%BC%9A%E9%BB%91%E6%B4%9E%E3%80%81%E5%B8%B8%E6%95%B0%E4%B8%8E%E7%88%B5%E5%A3%AB%E4%B9%90/" class="post-meta-item leancloud_visitors" data-flag-title="Genesis Noir：黑洞、常数与爵士乐" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p><em>Genesis Noir</em>的译名是《黑色起源》，但我并不喜欢这个翻译，因为它总让我联想到《黑山起源》（X）另一个译名《创世纪》可能会更恰当。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/08/23/2021-08-23-Genesis-Noir%EF%BC%9A%E9%BB%91%E6%B4%9E%E3%80%81%E5%B8%B8%E6%95%B0%E4%B8%8E%E7%88%B5%E5%A3%AB%E4%B9%90/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2021/08/22/2021-08-22-%E5%9C%B0%E7%90%86%E5%AD%A6%E4%B9%A0%E6%84%9F%E6%83%B3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Solitude21">
-      <meta itemprop="description" content="生命不息，折腾不止">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="A Time Soliloquy">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/08/22/2021-08-22-%E5%9C%B0%E7%90%86%E5%AD%A6%E4%B9%A0%E6%84%9F%E6%83%B3/" class="post-title-link" itemprop="url">地理学习感想</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-08-22 00:00:00" itemprop="dateCreated datePublished" datetime="2021-08-22T00:00:00+08:00">2021-08-22</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-08-23 10:49:58" itemprop="dateModified" datetime="2021-08-23T10:49:58+08:00">2021-08-23</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/academic/" itemprop="url" rel="index"><span itemprop="name">academic</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-    <span class="post-meta-item-icon">
-      <i class="far fa-comment"></i>
-    </span>
-    <span class="post-meta-item-text">Waline：</span>
-  
-    <a title="waline" href="/2021/08/22/2021-08-22-%E5%9C%B0%E7%90%86%E5%AD%A6%E4%B9%A0%E6%84%9F%E6%83%B3/#waline-comments" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" id="/2021/08/22/2021-08-22-%E5%9C%B0%E7%90%86%E5%AD%A6%E4%B9%A0%E6%84%9F%E6%83%B3/" data-xid="/2021/08/22/2021-08-22-%E5%9C%B0%E7%90%86%E5%AD%A6%E4%B9%A0%E6%84%9F%E6%83%B3/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-    <span id="/2021/08/22/2021-08-22-%E5%9C%B0%E7%90%86%E5%AD%A6%E4%B9%A0%E6%84%9F%E6%83%B3/" class="post-meta-item leancloud_visitors" data-flag-title="地理学习感想" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=530 height=86 src="//music.163.com/outchain/player?type=3&id=1370099408&auto=0&height=66"></iframe>
-
-<p>鉴于很快就要回校报到，我决定在这假期的<u>最后一周</u>里集中输出一些感想，各方面的。顺便练练笔，自从高考结束真的好久没有写过东西了，再不写些什么就真的废了。</p>
-<p>首先还是完成一下老师交给我的任务，谈一下地理学习。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/08/22/2021-08-22-%E5%9C%B0%E7%90%86%E5%AD%A6%E4%B9%A0%E6%84%9F%E6%83%B3/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
-  </nav>
-
+    <div class="comments" id="waline-comments"></div>
 </div>
   </main>
 
@@ -1301,7 +349,7 @@
 <script src="/js/third-party/math/mathjax.js"></script>
 
 
-<script class="next-config" data-name="waline" type="application/json">{"lang":null,"enable":true,"serverURL":"https://waline-reprise-n7tid935u-solitude21.vercel.app/","placeholder":"建议注册账号评论，在Gravatar上传头像","avatar":"mp","pageSize":10,"visitor":true,"comment_count":true,"requiredFields":[],"meta":["nick","mail","link"],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","dark":"body.darkmode--activated","el":"#waline-comments","path":"/"}</script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":null,"enable":true,"serverURL":"https://waline-reprise-n7tid935u-solitude21.vercel.app/","placeholder":"建议注册账号评论，在Gravatar上传头像","avatar":"mp","pageSize":10,"visitor":true,"comment_count":true,"requiredFields":[],"meta":["nick","mail","link"],"libUrl":"https://cdn.jsdelivr.net/npm/@waline/client/dist/Waline.min.js","dark":"body.darkmode--activated","el":"#waline-comments","path":"/2022/03/27/2022-03-27-BMP%E5%9B%BE%E5%83%8F%E6%97%8B%E8%BD%AC/"}</script>
 <script>
 document.addEventListener('page:loaded', () => {
   NexT.utils.loadComments(CONFIG.waline.el).then(() => 

@@ -20,15 +20,15 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"yoursite.com","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.8.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
-<meta name="description" content="作为一名计算机系的学生，我以后应该会把这个博客作为我的技术博客。所以我想测试一下贴代码的效果，刚好昨晚和旋转图像的大作业搏斗了一个晚上。说来也挺搞笑的，我废寝忘食地研究了好几个小时，就为了把一张破图片顺时针旋转90度……之前不是有新闻说吗，某地区负责健康码维护的技术人员花了老大的劲把二维码图片从1M压缩到100K。我对他们也有点感同身受了，或许压缩图片的操作真的隐藏着很多技术上的问题。有没有可能是">
+<meta name="description" content="这应该算是我的第一篇技术型文章吧。仅仅是试个水，看看贴上代码的效果，其实并没有什么技术含量。刚好昨晚我和旋转图像的大作业搏斗了一个晚上，说来也挺搞笑的，我废寝忘食地研究了好几个小时，就为了把一张破图片顺时针旋转90度……之前不是有新闻说吗，某地区负责健康码维护的技术人员花了老大的劲把二维码图片从1M压缩到100K。我对他们也有点感同身受了，或许压缩图片的操作真的隐藏着很多技术上的问题。有没有可能是">
 <meta property="og:type" content="article">
 <meta property="og:title" content="BMP图像旋转">
 <meta property="og:url" content="http://yoursite.com/2022/03/27/2022-03-27-BMP%E5%9B%BE%E5%83%8F%E6%97%8B%E8%BD%AC/index.html">
 <meta property="og:site_name" content="A Time Soliloquy">
-<meta property="og:description" content="作为一名计算机系的学生，我以后应该会把这个博客作为我的技术博客。所以我想测试一下贴代码的效果，刚好昨晚和旋转图像的大作业搏斗了一个晚上。说来也挺搞笑的，我废寝忘食地研究了好几个小时，就为了把一张破图片顺时针旋转90度……之前不是有新闻说吗，某地区负责健康码维护的技术人员花了老大的劲把二维码图片从1M压缩到100K。我对他们也有点感同身受了，或许压缩图片的操作真的隐藏着很多技术上的问题。有没有可能是">
+<meta property="og:description" content="这应该算是我的第一篇技术型文章吧。仅仅是试个水，看看贴上代码的效果，其实并没有什么技术含量。刚好昨晚我和旋转图像的大作业搏斗了一个晚上，说来也挺搞笑的，我废寝忘食地研究了好几个小时，就为了把一张破图片顺时针旋转90度……之前不是有新闻说吗，某地区负责健康码维护的技术人员花了老大的劲把二维码图片从1M压缩到100K。我对他们也有点感同身受了，或许压缩图片的操作真的隐藏着很多技术上的问题。有没有可能是">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-26T16:00:00.000Z">
-<meta property="article:modified_time" content="2022-03-27T15:27:50.306Z">
+<meta property="article:modified_time" content="2022-04-02T14:18:58.491Z">
 <meta property="article:author" content="Solitude21">
 <meta property="article:tag" content="CS">
 <meta name="twitter:card" content="summary">
@@ -219,10 +219,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2022-03-27 00:00:00 / 修改时间：23:27:50" itemprop="dateCreated datePublished" datetime="2022-03-27T00:00:00+08:00">2022-03-27</time>
+      <time title="创建时间：2022-03-27 00:00:00" itemprop="dateCreated datePublished" datetime="2022-03-27T00:00:00+08:00">2022-03-27</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2022-04-02 22:18:58" itemprop="dateModified" datetime="2022-04-02T22:18:58+08:00">2022-04-02</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -265,7 +271,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <p>作为一名计算机系的学生，我以后应该会把这个博客作为我的技术博客。所以我想测试一下贴代码的效果，刚好昨晚和旋转图像的大作业搏斗了一个晚上。说来也挺搞笑的，我废寝忘食地研究了好几个小时，就为了把一张破图片顺时针旋转90度……之前不是有新闻说吗，某地区负责健康码维护的技术人员花了老大的劲把二维码图片从1M压缩到100K。我对他们也有点感同身受了，或许压缩图片的操作真的隐藏着很多技术上的问题。有没有可能是，他们之前维护系统时一直使用1M的图片，然后很多别的功能都基于这种规格的图片开发出来，产生了极高的耦合。然后他们不得不花大量的时间进行解耦，为了让领导能听懂，就只提了一下压缩图片的事。以上纯属瞎猜。</p>
+        <p>这应该算是我的第一篇技术型文章吧。仅仅是试个水，看看贴上代码的效果，其实并没有什么技术含量。刚好昨晚我和旋转图像的大作业搏斗了一个晚上，说来也挺搞笑的，我废寝忘食地研究了好几个小时，就为了把一张破图片顺时针旋转90度……之前不是有新闻说吗，某地区负责健康码维护的技术人员花了老大的劲把二维码图片从1M压缩到100K。我对他们也有点感同身受了，或许压缩图片的操作真的隐藏着很多技术上的问题。有没有可能是，他们之前维护系统时一直使用1M的图片，然后很多别的功能都基于这种规格的图片开发出来，产生了极高的耦合。然后他们不得不花大量的时间进行解耦，为了让领导能听懂，就只提了一下压缩图片的事。以上纯属瞎猜。</p>
 <span id="more"></span>
 
 <p>BMP文件格式有很多坑，其中一个就是文件对齐。在24位BMP图像的像素矩阵中，一个像素用3个字节存储，存储内容是该像素的颜色信息，即<code>rgbBlue</code>、<code>rgbGreen</code>、<code>rgbRed</code>。然而，为了让像素矩阵的大小刚好是4的倍数，这个矩阵最后还会加上那么几列！旋转90度后，这个列数可能会变！变了的话又会影响到前面信息头中的数据。</p>

@@ -392,20 +392,13 @@ var options = {
   backgroundColor: 'transparent',
   buttonColorDark: '#767676',
   buttonColorLight: '#242424',
-  saveInCookies: false,
+  saveInCookies: true,
   label: '🌓',
-  autoMatchOsTheme: false
+  autoMatchOsTheme: true
 }
 const darkmode = new Darkmode(options);
 window.darkmode = darkmode;
 darkmode.showWidget();
-if (window.darkmode && !window.darkmode.isActivated()) {
-  window.darkmode.toggle();
-  var toggleButtons = document.getElementsByClassName("darkmode-toggle");
-  for (i = 0; i < toggleButtons.length; i++) {
-    toggleButtons[i].classList.add("darkmode-toggle--white");
-  }
-}
 </script>
 
 </body>
